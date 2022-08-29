@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.U2D;
 
 public class MenuLauncher : MonoBehaviour
 {
     [SerializeField] private Button _playAudioButton;
     [SerializeField] private Button _playNoAudioButton;
-    // Start is called before the first frame update
+    [SerializeField] private SpriteAtlas _atlas;
+
     void Start()
     {
+        _playAudioButton.GetComponent<Image>().sprite = _atlas.GetSprite("Blue gradient");
+        _playNoAudioButton.GetComponent<Image>().sprite = _atlas.GetSprite("Red gradient");
         _playAudioButton.onClick.RemoveAllListeners();
         _playNoAudioButton.onClick.RemoveAllListeners();
         _playAudioButton.onClick.AddListener(OnWithAudioButtonClicked);

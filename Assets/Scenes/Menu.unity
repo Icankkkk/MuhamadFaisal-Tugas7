@@ -441,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playAudioButton: {fileID: 1709404119}
   _playNoAudioButton: {fileID: 567194650}
+  _atlas: {fileID: 4343727234628468602, guid: 0860646154448844697de1dab2843605, type: 2}
 --- !u!1 &711285098
 GameObject:
   m_ObjectHideFlags: 0
