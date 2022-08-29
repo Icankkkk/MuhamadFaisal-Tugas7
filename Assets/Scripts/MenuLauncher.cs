@@ -24,7 +24,6 @@ public class MenuLauncher : MonoBehaviour
         }
         private void OnWithoutAudioButtonClicked()
         {
-            
             AudioManager.Instance.isAudioEnabled = false;
             SceneManager.LoadScene("Game");
         }
